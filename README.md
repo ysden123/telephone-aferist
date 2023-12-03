@@ -1,2 +1,2 @@
-# telephone-aferist
+# telephone-swindler
 Анализ телефонных номеров аферистов
