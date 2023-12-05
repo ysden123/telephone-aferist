@@ -7,6 +7,7 @@ package com.stulsoft.swindler
 import com.stulsoft.common.ManifestInfo
 import com.typesafe.scalalogging.StrictLogging
 
+import scala.io.StdIn
 import scala.util.{Failure, Success}
 
 object Main extends StrictLogging:
@@ -20,3 +21,6 @@ object Main extends StrictLogging:
         commonPrefixes.foreach(println)
       case Failure(exception) =>
         logger.error(exception.getMessage, exception)
+    println("Press Enter to close the window...")
+    println()
+    StdIn.readLine()
