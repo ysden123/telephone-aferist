@@ -1,0 +1,43 @@
+<mxfile host="Electron" modified="2023-12-06T12:59:57.649Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.2 Chrome/114.0.5735.289 Electron/25.9.4 Safari/537.36" etag="LoVP1IiCRCE71U-Jl3Vw" version="22.1.2" type="device">
+  <diagram name="Page-1" id="W4IxPoSsOzv7Pph46HdF">
+    <mxGraphModel dx="1418" dy="820" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Y7neoSG__tfp8uD0J0PZ-1" value="Algorithnm&lt;br&gt;v0.0 2023/12/06" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="305" y="13" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Y7neoSG__tfp8uD0J0PZ-2" value="number1 = extractNumber(i1)" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="90" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Y7neoSG__tfp8uD0J0PZ-3" value="number2 =&amp;nbsp; extractNumber(i2)" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="297.5" y="320" width="175" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Y7neoSG__tfp8uD0J0PZ-4" value="i2 = i1 + 1" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="325" y="210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Y7neoSG__tfp8uD0J0PZ-5" value="prefix = common 1st part" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="305" y="410" width="160" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Y7neoSG__tfp8uD0J0PZ-8" value="No" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Y7neoSG__tfp8uD0J0PZ-6" target="Y7neoSG__tfp8uD0J0PZ-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Y7neoSG__tfp8uD0J0PZ-12" value="Yes" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="Y7neoSG__tfp8uD0J0PZ-6" target="Y7neoSG__tfp8uD0J0PZ-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Y7neoSG__tfp8uD0J0PZ-6" value="prefixes contains the prefix?" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="350" y="500" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="Y7neoSG__tfp8uD0J0PZ-13" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="Y7neoSG__tfp8uD0J0PZ-7" target="Y7neoSG__tfp8uD0J0PZ-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="Y7neoSG__tfp8uD0J0PZ-7" value="add new prefix" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="170" y="510" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Y7neoSG__tfp8uD0J0PZ-11" value="Increment&amp;nbsp; count" style="whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="330" y="610" width="120" height="60" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

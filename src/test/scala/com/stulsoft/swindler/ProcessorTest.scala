@@ -13,10 +13,57 @@ class ProcessorTest extends AnyFlatSpec:
     Parser.parseFile("src/test/resources/data/list2.txt") match
       case Success(telephones) =>
         val commonPrefixes = Processor.findCommonPrefixes(telephones)
-        assertResult(2)(commonPrefixes.length)
+        assertResult(2)(commonPrefixes.prefixes.size)
         //        commonPrefixes.foreach(println)
-        assertResult(true)(commonPrefixes.contains("+972 54-228-"))
-        assertResult(true)(commonPrefixes.contains("+972 "))
+        assertResult(true)(commonPrefixes.prefixes.toList.map(p => p.number).contains("+972 54-228-"))
+        assertResult(true)(commonPrefixes.prefixes.toList.map(p => p.number).contains("+972 "))
+      case Failure(exception) =>
+        fail(exception.getMessage)
+  }
+
+  "findCommonPrefixes" should "find common prefixes 2" in {
+    Parser.parseFile("src/test/resources/data/list3.txt") match
+      case Success(telephones) =>
+        val result = Processor.findCommonPrefixes(telephones)
+        result.prefixes.foreach(println)
+      case Failure(exception) =>
+        fail(exception.getMessage)
+  }
+
+  "findCommonPrefixes" should "find common prefixes 4" in {
+    Parser.parseFile("src/test/resources/data/list4.txt") match
+      case Success(telephones) =>
+        val result = Processor.findCommonPrefixes(telephones)
+        result.prefixes.foreach(println)
+      case Failure(exception) =>
+        fail(exception.getMessage)
+  }
+
+  "findCommonPrefixes" should "find common prefixes 5" in {
+    Parser.parseFile("src/test/resources/data/list5.txt") match
+      case Success(telephones) =>
+        val result = Processor.findCommonPrefixes(telephones)
+        result.prefixes.foreach(println)
+      case Failure(exception) =>
+        fail(exception.getMessage)
+  }
+
+  "findCommonPrefixes" should "find common prefixes 6" in {
+    Parser.parseFile("src/test/resources/data/list6.txt") match
+      case Success(telephones) =>
+        val result = Processor.findCommonPrefixes(telephones)
+        result.prefixes.foreach(println)
+      case Failure(exception) =>
+        fail(exception.getMessage)
+  }
+
+  "findCommonPrefixes" should "find common prefixes 6-2" in {
+    Parser.parseFile("src/test/resources/data/list6.txt") match
+      case Success(telephones) =>
+        val result = Processor.findCommonPrefixes(telephones)
+        println(s"Total number of telephones = ${result.total}")
+        println(s"Prefixes:")
+        result.prefixes.foreach(println)
       case Failure(exception) =>
         fail(exception.getMessage)
   }

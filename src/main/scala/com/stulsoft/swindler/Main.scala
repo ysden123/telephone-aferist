@@ -16,11 +16,17 @@ object Main extends StrictLogging:
     val filename = s"""${System.getenv("APPDATA")}\\telephone-swindler\\telephones.txt"""
     Parser.parseFile(filename) match
       case Success(telephones) =>
-        val commonPrefixes = Processor.findCommonPrefixes(telephones)
+        println("Sorted telephones:")
+        telephones.sortBy(telephone => telephone.number).foreach(println)
+        println()
+
+        val result= Processor.findCommonPrefixes(telephones)
+        println(s"Total number of telephones is ${result.total}")
         println("Common telephone prefixes:")
-        commonPrefixes.foreach(println)
+        result.prefixes.toList.sortBy(prefix => prefix.number).foreach(println)
       case Failure(exception) =>
         logger.error(exception.getMessage, exception)
+
     println("Press Enter to close the window...")
     println()
     StdIn.readLine()
