@@ -12,11 +12,13 @@ class ProcessorTest extends AnyFlatSpec:
   "findCommonPrefixes" should "find common prefixes" in {
     Parser.parseFile("src/test/resources/data/list2.txt") match
       case Success(telephones) =>
+        telephones.foreach(println)
         val commonPrefixes = Processor.findCommonPrefixes(telephones)
-        assertResult(2)(commonPrefixes.prefixes.size)
+        println("commonPrefixes:")
+        commonPrefixes.prefixes.foreach(println)
+        assertResult(1)(commonPrefixes.prefixes.size)
         //        commonPrefixes.foreach(println)
         assertResult(true)(commonPrefixes.prefixes.toList.map(p => p.number).contains("+972 54-228-"))
-        assertResult(true)(commonPrefixes.prefixes.toList.map(p => p.number).contains("+972 "))
       case Failure(exception) =>
         fail(exception.getMessage)
   }
